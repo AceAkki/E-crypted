@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ENCRYPTED B.S. </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+body {
+  <!----background:url(GIF_34.gif) no-repeat center fixed;
+  background-size:cover;
+}
+  </style>
+</head>
+<body>
+
+<div class="p-5 bg-primary text-white text-center">
+  <h1>Encryption</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html#M-Alpha">Mono-Alphabetic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html#Caesar">Caesar Cipher</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="5.html">Crypt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="5.5.html">Attacks</a>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+
+     <ul class="nav navbar-nav navbar-right">
+       <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+       <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>        
+      </ul>
+
+  </div>
+</nav>
+
+
+
+<div class="container mt-3">
+
+      <iframe src="L_Attacks.html" title="" width="100%" height="100" style="border:none;">
+	</iframe>
+</div>
+
+
+
+
+<div class="container mt-12">
+
+  <div class="row">
+    <div id="M-Alpha" class="col-sm-12">
+      <h2 style="font-family:ModeSeven ; font-size: 30px; font-weight: 600; text-align: center; color:#4e0973;"></h2>
+      <h5 style="font-family:ModeSeven ; font-size: 16px; font-weight: 600; text-align: center; color:#4e0973;"></h5>
+       
+
+       
+
+<h1 style="text-align:center"> <span style="background-color:#000; color:#66F;"> Secret Key Cryptography </span> </h1>
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;"> Stream Ciphers</h3>
+<p> <span style="background-color:#66F; color:#FFF"> 
+Stream ciphers work on a single bit or byte at any time and constantly change the key using feedback mechanisms. A self-synchronizing stream cipher ensures the decryption process stays in sync with the encryption process by recognizing where it sits in the bit keystream. A synchronous stream cipher generates the keystream independently of the message stream and generates the same keystream function at both the sender and the receiver. <br>
+</span>
+
+</p>
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;"> &nbsp; Block Ciphers &nbsp;</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Block ciphers encrypt one block of fixed-size data at a time. It will always encrypt a plaintext data block to the same ciphertext when the same key is used. A good example of this is the Feistel cipher, which uses elements of key expansion, permutation, and substitution to create vast confusion and diffusion in the cipher. <br> 
+
+The stages of encryption and decryption are similar if not identical, which means reversing the key reduces the code size and circuitry required for implementing the cipher in a piece of software or hardware.
+ </span> <br> </p>
+
+<h1 style="text-align:center"> <span style="background-color:#000; color:#66F;"> Public Key Cryptography </span> </h1>
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">RSA</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+RSA was the first and remains the most common PKC implementation. The algorithm is named after its MIT mathematician developers, Ronald Rivest, Adi Shamir, and Leonard Adleman, and is used in data encryption, digital signatures, and key exchanges. It uses a large number that is the result of factoring two selected prime numbers. It is impossible for an attacker to work out the prime factors, which makes RSA especially secure. </span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Elliptic Curve Cryptography (ECC)</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+ECC is a PKC algorithm based on the use of elliptic curves in cryptography. It is designed for devices with limited computing power or memory to encrypt internet traffic. A common use of ECC is in embedded computers, smartphones, and cryptocurrency networks like bitcoin, which consumes around 10% of the storage space and bandwidth that RSA requires. </span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Digital Signature Algorithm (DSA)</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+DSA is a standard that enables digital signatures to be used in message authentication. It was introduced by the National Institute of Standards and Technology (NIST) in 1991 to ensure a better method for creating digital signatures. </span> </p>
+
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Identity-based Encryption (IBE)</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+IBE is a PKC system that enables the public key to be calculated from unique information based on the user’s identity, such as their email address. A trusted third party or private key generator then uses a cryptographic algorithm to calculate a corresponding private key. This enables users to create their own private keys without worrying about distributing public keys. </span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Diffie-Hellman and Key Exchange Algorithm (KEA)</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+The Diffie-Hellman algorithm was devised in 1976 by Stanford University professor Martin Hellman and his graduate student Whitfield Diffie, who are considered to be responsible for introducing PKC as a concept. It is used for secret key exchanges and requires two people to agree on a large prime number. 
+<br>
+
+KEA is a variation of the Diffie-Hellman algorithm and was proposed as a method for key exchange in the NIST/National Security Agency’s (NSA) Capstone project, which developed cryptography standards for public and government use. </span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Hash Function</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Hash functions ensure that data integrity is maintained in the encryption and decryption phases of cryptography. It is also used in databases so that items can be retrieved more quickly.  
+<br>
+
+Hashing is the process of taking a key and mapping it to a specific value, which is the hash or hash value. A hash function transforms a key or digital signature, then the hash value and signature are sent to the receiver, who uses the hash function to generate the hash value and compare it with the one they received in the message. <br>
+
+A common hash function is folding, which takes a value and divides it into several parts, adds parts, and uses the last four remaining digits as the key or hashed value. Another is digit rearrangement, which takes specific digits in the original value, reverses them, and uses the remaining number as the hash value. Examples of hash function types include Secure Hash Algorithm 1 (SHA-1), SHA-2, and SHA-3.
+ </span> </p>
+   
+
+  <div class="toast">
+    <div class="toast-header">
+      <strong class="me-auto">Toast Header</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      <p>Some text inside the toast body</p>
+    </div>
+  </div>
+
+
+
+    
+
+    
+
+
+
+      <h3 class="mt-4">Some Links</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+
+
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+      </ul>
+
+      
+
+      <hr class="d-sm-none">
+
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-5 p-4 bg-dark text-white text-center">
+  <p>Footer</p>
+</div>
+
+
+
+
+
+ <script>
+        
+
+document.getElementById("toastbtn").onclick = function() {
+  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  var toastList = toastElList.map(function(toastEl) {
+    return new bootstrap.Toast(toastEl)
+  })
+  toastList.forEach(toast => toast.show()) 
+}
+
+    </script>
+</body>
+</html>

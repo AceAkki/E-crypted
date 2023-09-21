@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ENCRYPTED B.S. </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+
+body {
+  <!----background:url(GIF_34.gif) no-repeat center fixed;
+  background-size:cover;
+}
+  </style>
+</head>
+<body>
+
+<div class="p-5 bg-primary text-white text-center">
+  <h1>Encryption</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html#M-Alpha">Mono-Alphabetic</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="index.html#Caesar">Caesar Cipher</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="5.html">Crypt</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="5.5.html">Attacks</a>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+
+
+     <ul class="nav navbar-nav navbar-right">
+       <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+       <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>        
+      </ul>
+
+  </div>
+</nav>
+
+
+
+
+<div class="container mt-3">
+
+      <iframe src="L_Attacks.html" title="" width="100%" height="100" style="border:none;">
+	</iframe>
+</div>
+
+
+
+<div class="container mt-12">
+
+  <div class="row">
+    <div id="M-Alpha" class="col-sm-12">
+      <h2 style="font-family:ModeSeven ; font-size: 30px; font-weight: 600; text-align: center; color:#4e0973;"></h2>
+      <h5 style="font-family:ModeSeven ; font-size: 16px; font-weight: 600; text-align: center; color:#4e0973;"></h5>
+       
+    
+<h1 style="text-align:center"> <span style="background-color:#000; color:#66F;">What Are Cryptographic Key Attacks? What Are the Types? </span> </h1>
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;"> Stream Ciphers</h3>
+<p> <span style="background-color:#66F; color:#FFF"> 
+Modern cryptographic key techniques are increasingly advanced and often even considered unbreakable. However, as more entities rely on cryptography to protect communications and data, it is vital to keep keys secure. One compromised key could result in regulatory action, fines and punishments, reputational damage, and the loss of customers and investors.<br>
+
+Potential key-based issues and attack types that could occur include: 
+</span>
+
+</p>
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;"> &nbsp; Weak Keys &nbsp;</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Keys are essentially random numbers that become more difficult to crack the longer the number is. Key strength and length need to be relative to the value of the data it protects and the length of time that data needs to be protected. Keys should be created with a high-quality, certified random number generator that collects entropy—the information density of a file in bits or characters—from suitable hardware noise sources.<br> 
+ </span> <br> </p>
+
+<h1 style="text-align:center"> <span style="background-color:#000; color:#66F;"> </span> </h1>
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Incorrect Use of Keys</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+When keys are used improperly or encoded poorly, it becomes easier for a hacker to crack what should have been a highly secure key. </span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Reuse of Keys</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Every key should only be generated for a specific single-use encrypt/decrypt purpose, and use beyond that may not offer the level of protection required.</span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Non-rotation of Keys</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Keys that are overused, such as encrypting too much data on a key, become vulnerable to attacks. This is particularly the case with older ciphers and could result in data being exposed. Keys need to be rotated, renewed, and updated when appropriate. </span> </p>
+
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Inappropriate Storage of Keys</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Storing keys alongside the information they have been created to protect increases their chances of being compromised. For example, keys stored on a database or server that gets breached could also be compromised when the data is exfiltrated.</span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Inadequate Protection of Keys</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Huge cyberattacks like Meltdown/Spectre and Heartbleed have been capable of exposing cryptographic keys stored in server memory. Therefore, stored keys must be encrypted and only made available unencrypted when placed within secure, tamper-protected environments, or even kept offline. 
+<br>
+</span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Insecure Movement of Keys</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Moving keys between systems should only occur when the key is encrypted or wrapped under an asymmetric or symmetric pre-shared transport key. If this is not possible, then the key must be split up into multiple parts that are kept separate, re-entered into the target system, then destroyed. 
+<br>
+</span> </p>
+
+
+<h3 style="text-align:center"> <span style="background-color:; color:#FFF;">Insider Threats (User Authentication, Dual Control, and Segregation of Roles)</h3>
+<p> <span style="background-color:#66F; color:#FFF">
+Insider threats are one of the most serious threats posed to any key. This is most likely to occur through a rogue employee having access to a key, then using it for malicious purposes or giving or selling it to a hacker or third party.
+<br>
+</span> </p>
+   
+
+  <div class="toast">
+    <div class="toast-header">
+      <strong class="me-auto">Toast Header</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      <p>Some text inside the toast body</p>
+    </div>
+  </div>
+
+
+
+    
+
+    
+
+
+
+      <h3 class="mt-4">Some Links</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+
+
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+      </ul>
+
+      
+
+      <hr class="d-sm-none">
+
+    </div>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-5 p-4 bg-dark text-white text-center">
+  <p>Footer</p>
+</div>
+
+
+
+
+
+ <script>
+        
+
+document.getElementById("toastbtn").onclick = function() {
+  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+  var toastList = toastElList.map(function(toastEl) {
+    return new bootstrap.Toast(toastEl)
+  })
+  toastList.forEach(toast => toast.show()) 
+}
+
+    </script>
+</body>
+</html>
