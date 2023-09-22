@@ -1,0 +1,63 @@
+body {
+  background:url("") no-repeat center fixed;
+  background-size:cover;
+}
+
+
+r1{
+  border-radius: 25px;
+}
+
+
+iframe {
+    border-radius: 10px;
+}
+
+
+
+
+
+ul {
+  overflow: hidden;
+  background-color: #059d4b;
+  color: #cbcee7;
+  border-radius:20px;
+}
+
+
+
+li a:hover:not(.active) {
+  color:#fff;
+  background-color: #111;
+}
+
+.active {
+  background-color: #31473f;
+}
+
+
+.navbar {
+  overflow: hidden;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+}
+
+
+.navbar-brand {
+  color: #9d9d9d;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: #059d4b !important;
+
+}
+
+
+
+
+
+
+
+
