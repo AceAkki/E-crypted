@@ -1,0 +1,126 @@
+
+
+
+body {
+  background:url() no-repeat center fixed;
+  background-size:cover;
+}
+
+
+r1{
+  border-radius: 25px;
+}
+
+
+iframe {
+    border-radius: 10px;
+}
+
+
+
+
+
+ul {
+  overflow: hidden;
+  background-color: #059d4b;
+  color: #cbcee7;
+  border-radius:20px;
+}
+
+ul li:nth-child(0) {
+  background-color: ;
+  color: #000;
+  border-radius:5px;
+  align:center;
+}
+
+
+
+li a:hover:not(.active) {
+  color:#fff;
+  background-color: #111;
+
+}
+
+.active {
+  background-color: #31473f;
+}
+
+
+
+
+.navbar {
+  overflow: hidden;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-brand {
+  color: #9d9d9d;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: #059d4b !important;
+
+}
+
+
+
+.move {
+
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-image: linear-gradient(#000, #000);
+  background-size: 100% 5px;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+   transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+.move:hover {
+  font-family: 'ModeSeven', cursive;
+  font-size:40px;
+  color:#059d4b !important;
+  style:bolder;
+  background-size: 100% 100%;
+  background-position: 0% 100%;
+  transition: background-position .7s, background-size .5s ease-in-out;
+}
+
+
+
+  /* Styles for the iframe container */
+  .iframe-container {
+    position: relative;
+    overflow: hidden;
+    /* 16:9 aspect ratio (adjust as needed) */
+    padding-top: 10.25%; /* 9/16 = 56.25% */
+    margin: 0 auto;
+    max-width: 100%; /* Ensure the iframe doesn't exceed the container width */
+}
+
+
+/* Media query for screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .iframe-container {
+      padding-top: 5%; /* Adjust the aspect ratio for smaller screens */
+  }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+
