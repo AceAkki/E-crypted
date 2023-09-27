@@ -103,7 +103,7 @@ li {
 
 .bg1{
     background-image:
-    radial-gradient(rgba(132,3,0, 0.75), rgba(5,47,156, 0.75) ), url('t0.jpg');
+    radial-gradient(rgba(132,3,0, 0.75), rgba(5,47,156, 0.75) ), url('T0.jpg');
     background-size: cover;
 	background-position:center;
 
@@ -113,7 +113,7 @@ li {
 
 .bg2{
     background-image:
-    linear-gradient(45deg, rgba(245,70,66, 0.75), rgba(8,83,156, 0.75) ), url('t1.jpg');
+    linear-gradient(45deg, rgba(245,70,66, 0.75), rgba(8,83,156, 0.75) ), url('T1.jpg');
     background-size: cover;
 	background-position:center;
      color: #fff;
