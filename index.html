@@ -26,13 +26,22 @@
 
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm" >
   <div class="container-fluid" >
      <div>
-      <a class="navbar-brand" href="#Intro">&nbsp;&nbsp;&nbsp;Encrypted : Information & Tools</a>
+      <a class="navbar-brand" href="#Intro">
+&nbsp;&nbsp;&nbsp;Encrypted : Information & Tools &nbsp;
+     </a>
      </div> &nbsp;        
     
-     <ul class="navbar-nav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+     <ul class="navbar-nav" style="text-align:center">
 
       <li class="nav-item">
         <a class="nav-link" href="#M-Alpha">Mono-Alphabetic</a>
@@ -50,16 +59,22 @@
 
     </ul>
 
-
+    <div>
   </div>
 </nav>
 
 
   <div class="container-fluid bg-dark">
-    <iframe src="L 1.html" width="100%" height="700" style="border:thick; border-color:#FFF; alignment-baseline:central"></iframe>
+    <div class="desk">
+    <iframe src="L 1.html" width="100%" height="1000" alignment-baseline:central"></iframe>
+    </div>
   </div>
   
-
+  <div class="container-fluid bg-dark">
+    <div class="phone">
+    <iframe src="L 2.html" width="100%" height="900" alignment-baseline:central"></iframe>
+    </div>
+  </div>
 
 
  
@@ -96,7 +111,7 @@ At its most basic level, encryption is the process of protecting information or 
 </span>
 </p> <br>
 
-      <h2 style="text-align: center"> <span class="move" style="background-color:#443463; color:#e4e3f6; border-radius: 25px;  padding: 8px">How Encryption Works 
+      <h2 style="text-align: center"> <span class="move" style="background-color: #443463; color:#e4e3f6; border-radius: 25px;  padding: 8px">How Encryption Works 
       </span></h2> <br>
 <p>
 <span style="font-size: 20px;  text-align: center; background-color:#FFF; color:#66F">
@@ -141,7 +156,7 @@ Asymmetric encryption is considered more expensive to produce and takes more com
 
 
 
-<div class="container-fluid" style="background-color:#000; background-image: linear-gradient(to bottom right, #321d2f, #3d2e4f, #393e6f, #4c5f7a);">
+<div class="container-fluid bg1">
 
 <div class="container md-5">
 
@@ -163,6 +178,7 @@ Asymmetric encryption is considered more expensive to produce and takes more com
     
     <label for="randomKey">Use Random Key:</label>
     <input type="checkbox" id="randomKey" onchange="toggleRandomKey()" />
+
     <div id="randomKeyContainer" style="display: none;">
         <button onclick="generateRandomKey()">Generate Random Key</button>
         <p id="randomKeyValue"></p>
@@ -216,7 +232,7 @@ Asymmetric encryption is considered more expensive to produce and takes more com
 
 
 
-<div class="container-fluid" style="background-color:#000; background-image: linear-gradient(#321d2f, #3d2e4f, #393e6f, #4c5f7a)">
+<div class="container-fluid bg2">
 
 
 <div class="container md-5">
@@ -338,146 +354,8 @@ Asymmetric encryption is considered more expensive to produce and takes more com
 
 
 
- <script>
+ <script src="script.js">
 
-    // JavaScript code for encryption and decryption goes here
-
-    function toggleRandomKey() {
-        const randomKeyContainer = document.getElementById("randomKeyContainer");
-        const keyInput = document.getElementById("key");
-
-        if (document.getElementById("randomKey").checked) {
-            randomKeyContainer.style.display = "block";
-            keyInput.disabled = true;
-        } else {
-            randomKeyContainer.style.display = "none";
-            keyInput.disabled = false;
-        }
-    }
-
-    function generateRandomKey() {
-        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        let randomKey = "";
-        const length = characters.length;
-
-        for (let i = 0; i < length; i++) {
-            const randomIndex = Math.floor(Math.random() * length);
-            randomKey += characters.charAt(randomIndex);
-        }
-
-        const randomKeyValue = document.getElementById("randomKeyValue");
-        randomKeyValue.textContent = `Random Key: ${randomKey}`;
-        randomKeyValue.style.display = "block";
-    }
-
-    function copyRandomKey() {
-        const randomKey = document.getElementById("randomKeyValue").textContent.split(": ")[1];
-        const dummyTextarea = document.createElement("textarea");
-        document.body.appendChild(dummyTextarea);
-        dummyTextarea.value = randomKey;
-        dummyTextarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummyTextarea);
-        alert("Random Key Copied!");
-    }
-
-        function encrypt() {
-            const inputText = document.getElementById("inputText").value;
-            const key = document.getElementById("key").value;
-
-            const alphabet = "abcdefghijklmnopqrstuvwxyz";
-            const encryptedAlphabet = key.toLowerCase() + alphabet;
-
-            let encryptedText = "";
-
-            for (let i = 0; i < inputText.length; i++) {
-                const char = inputText.charAt(i).toLowerCase();
-                const index = alphabet.indexOf(char);
-
-                if (index !== -1) {
-                    const encryptedChar = encryptedAlphabet.charAt(index);
-                    encryptedText += inputText.charAt(i) === inputText.charAt(i).toLowerCase() ? encryptedChar : encryptedChar.toUpperCase();
-                } else {
-                    encryptedText += inputText.charAt(i);
-                }
-            }
-
-            document.getElementById("result").textContent = "Encrypted Text: " + encryptedText;
-        }
-
-        function decrypt() {
-            const inputText = document.getElementById("inputText").value;
-            const key = document.getElementById("key").value;
-
-            const alphabet = "abcdefghijklmnopqrstuvwxyz";
-            const encryptedAlphabet = key.toLowerCase() + alphabet;
-
-            let decryptedText = "";
-
-            for (let i = 0; i < inputText.length; i++) {
-                const char = inputText.charAt(i).toLowerCase();
-                const index = encryptedAlphabet.indexOf(char);
-
-                if (index !== -1) {
-                    const decryptedChar = alphabet.charAt(index);
-                    decryptedText += inputText.charAt(i) === inputText.charAt(i).toLowerCase() ? decryptedChar : decryptedChar.toUpperCase();
-                } else {
-                    decryptedText += inputText.charAt(i);
-                }
-            }
-
-            document.getElementById("result").textContent = "Decrypted Text: " + decryptedText;
-        }
-
-
-
-       // JavaScript code for Caesar cipher encryption and decryption
-
-    function encryptC() {
-        const inputText = document.getElementById("inputTextC").value;
-        const shift = parseInt(document.getElementById("shift").value);
-        const encryptedText = caesarCipherEncrypt(inputText, shift);
-        document.getElementById("resultC").textContent = "Encrypted Text: " + encryptedText;
-    }
-
-    function decryptC() {
-        const inputText = document.getElementById("inputTextC").value;
-        const shift = parseInt(document.getElementById("shift").value);
-        const decryptedText = caesarCipherDecrypt(inputText, shift);
-        document.getElementById("resultC").textContent = "Decrypted Text: " + decryptedText;
-    }
-
-    function caesarCipherEncrypt(text, shift) {
-        let resultC = "";
-        for (let i = 0; i < text.length; i++) {
-            const char = text[i];
-            if (char.match(/[a-z]/i)) {
-                const isUpperCase = char === char.toUpperCase();
-                const codeA = isUpperCase ? 65 : 97;
-                const charCode = char.charCodeAt(0);
-                const encryptedCharCode = (charCode - codeA + shift) % 26 + codeA;
-                const encryptedChar = String.fromCharCode(encryptedCharCode);
-                resultC += isUpperCase ? encryptedChar.toUpperCase() : encryptedChar;
-            } else {
-                resultC += char;
-            }
-        }
-        return resultC;
-    }
-
-    function caesarCipherDecrypt(text, shift) {
-        return caesarCipherEncrypt(text, 26 - shift);
-    }
-
-
-
-document.getElementById("toastbtn").onclick = function() {
-  var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-  var toastList = toastElList.map(function(toastEl) {
-    return new bootstrap.Toast(toastEl)
-  })
-  toastList.forEach(toast => toast.show()) 
-}
 
     </script>
 </body>
