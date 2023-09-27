@@ -75,11 +75,13 @@ li {
   color: #059d4b !important;
 }
 
+.glow:hover{
+    background-color:white;
+}
+
 
 
 .move {
-
-
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -92,7 +94,7 @@ li {
 
 .move:hover {
   font-family: 'ModeSeven', cursive;
-  font-size:40px;
+  font-size:20px;
   color:#059d4b !important;
   style:bolder;
   background-size: 100% 100%;
@@ -103,7 +105,7 @@ li {
 
 .bg1{
     background-image:
-    radial-gradient(rgba(132,3,0, 0.75), rgba(5,47,156, 0.75) ), url('T0.jpg');
+    radial-gradient(rgba(132,3,0, 0.75), rgba(5,47,156, 0.75) ), url('GIF_15.gif');
     background-size: cover;
 	background-position:center;
 
@@ -113,7 +115,7 @@ li {
 
 .bg2{
     background-image:
-    linear-gradient(45deg, rgba(245,70,66, 0.75), rgba(8,83,156, 0.75) ), url('T1.jpg');
+    linear-gradient(45deg, rgba(245, 239, 66, 0.75), rgba(8,83,156, 0.75) ), url('GIF_7.gif');
     background-size: cover;
 	background-position:center;
      color: #fff;
