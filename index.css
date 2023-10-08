@@ -1,9 +1,10 @@
 
 
 
-body {
+html, body {
   background:url() no-repeat center fixed;
   background-size:cover;
+  overflow-x: hidden; 
 }
 
 
@@ -23,13 +24,12 @@ iframe {
 ul {
   overflow: hidden;
   background-color: #059d4b;
-  color: #cbcee7;
   border-radius:20px;
 }
 
 ul li:nth-child(0) {
   background-color: ;
-  color: #000;
+  color: style="color:#7A5CF2 !important";
   border-radius:5px;
   align:center;
 }
@@ -38,80 +38,109 @@ ul li:nth-child(0) {
 
 li a:hover:not(.active) {
   color:#fff;
-  background-color: #111;
+  font-weight:bolder !important;
+  background-color: #7A5CF2;
 
 }
 
-.active {
-  background-color: #31473f;
+li {
+  color:#7A5CF2 !important; 	
 }
-
 
 
 
 .navbar {
   overflow: hidden;
   position: fixed !important;
+  background-color:rgba(33, 37, 41, 1);
   top: 0;
   width: 100%;
 }
 
+
+
+.navbar-toggler-icon {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
 .navbar-brand {
-  color: #9d9d9d;
+  color: #fff !important;
+
+  border-radius:10px;
+  padding:10x;
 }
 
 .navbar-brand:focus,
 .navbar-brand:hover {
   color: #059d4b !important;
+}
 
+.glow:hover{
+    background-color:white;
 }
 
 
 
-.move {
 
 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-image: linear-gradient(#000, #000);
-  background-size: 100% 5px;
-  background-repeat: no-repeat;
-  background-position: 100% 0%;
-   transition: background-size .7s, background-position .5s ease-in-out;
+
+.bg1{
+    background-image:
+    radial-gradient(rgba(132,3,0, 0.75), rgba(5,47,156, 0.75) ), url('img/gif/gif_39.gif');
+    background-size: cover;
+	background-position:center;
+
+     color: #fff;
+    }
+
+
+.bg2{
+    background-image:
+    linear-gradient(45deg, rgba(245,70,66, 0.75), rgba(8,83,156, 0.75) ), url('img/gif/gif_40.gif');
+    background-size: cover;
+	background-position:center;
+     color: #fff;
+    }
+
+.bg3{
+    background-image:
+    linear-gradient(45deg, rgba(245,70,66, 0.25), rgba(8,83,156, 0.25) ), url('img/Tarrow.jpg');
+    background-size: cover;
+	background-position:center;
+     color: #fff;
+    }
+
+
+
+
+.cropped {
+     width: 210px;
+     height: 36px;
+     overflow: hidden;
+
 }
 
-.move:hover {
-  font-family: 'ModeSeven', cursive;
-  font-size:40px;
-  color:#059d4b !important;
-  style:bolder;
-  background-size: 100% 100%;
-  background-position: 0% 100%;
-  transition: background-position .7s, background-size .5s ease-in-out;
+ .cropped img {
+     width: 140px;
+     height: 120px;
+     margin: 0px 0px 0px 0px;
 }
 
 
 
-  /* Styles for the iframe container */
-  .iframe-container {
-    position: relative;
-    overflow: hidden;
-    /* 16:9 aspect ratio (adjust as needed) */
-    padding-top: 10.25%; /* 9/16 = 56.25% */
-    margin: 0 auto;
-    max-width: 100%; /* Ensure the iframe doesn't exceed the container width */
+
+
+/* Media query for screens smaller than 665px (adjust as needed) */
+    @media all and (min-width: 480px) {
+    .desk {display:block;}
+    .phone {display:none;}
 }
 
-
-/* Media query for screens smaller than 768px (adjust as needed) */
-@media (max-width: 768px) {
-  .iframe-container {
-      padding-top: 5%; /* Adjust the aspect ratio for smaller screens */
-  }
+@media all and (max-width: 479px) {
+    .desk {display:none;}
+    .phone {display:block;}
 }
-
-
 
 
 @media screen and (max-width: 600px) {
